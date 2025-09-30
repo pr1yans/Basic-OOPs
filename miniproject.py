@@ -1,9 +1,18 @@
 class Chatbook:
+    __user_id=0
     def __init__(self):
+        self.userid = Chatbook.__user_id
+        Chatbook.__user_id += 1
         self.username = ""
         self.password = ""
         self.login = False
-        self.menu()
+        #self.menu()
+    @staticmethod   
+    def get_id():
+        return Chatbook.__user_id
+    @staticmethod
+    def set_id(value):
+        Chatbook.__user_id = value
         
     def menu(self):
         user_input = input(""""Welcome,
@@ -66,6 +75,4 @@ class Chatbook:
         print('\n')
         self.menu()
             
-CB = Chatbook()
-
 
