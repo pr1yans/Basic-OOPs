@@ -2,9 +2,6 @@ class Animal:
     def __init__(self, Name):
         self.Name = Name
         
-    def rough():
-        print('he is calling')
-        
     def speak(self):
         print(f"animal makes sound {self.Name}")
         
